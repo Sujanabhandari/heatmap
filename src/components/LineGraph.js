@@ -14,7 +14,7 @@ const LineGraph = ({ data, targetId }) => {
 
     const linedata = filteredData.map(([key, value]) => {
         return {
-            x: value.x,
+            x: value.timeStamp,
             y: value.y,
             type: 'scatter',
             name:`Human ${key}`,
@@ -25,7 +25,7 @@ const LineGraph = ({ data, targetId }) => {
     return (
         <Plot
             data={linedata}
-            layout={{ width: 1200, height: 500, title: 'A Fancy Plot' }}
+            layout={{ width: 1024, height: 800, title: 'Line Graph of Instances' }}
         />
     );
 

@@ -8,13 +8,15 @@ const FilterInstance = ({instances, setTargetid}) => {
         setTargetid(id);
     }
     return (
-        <select className="form-select form-select-sm" aria-label="Default select example" onChange={handleClick}>
+        <div>
+        <select className="form-select mt-5" style={{height:"50px", width:"300px"}} onChange={handleClick}>
             <option value="null">All Instances</option>
             {instances.map((data, index) => (
-                <option value={data} key={index}>Human {data}</option>
+                <option value={data} key={index}>Instance {data}</option>
             )
             )}
         </select>
+        </div>
     )
 }
 export default FilterInstance;
