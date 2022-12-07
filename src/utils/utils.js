@@ -1,12 +1,10 @@
-import heatMapData from "../components/Model";
-
-export const getLists = (id=null) => {
+export const getLists = (heatMapData) => {
     const data = {};
     const x = [];
     const y = [];
     const timeStamp = [];
     heatMapData.forEach(el => {
-        if(el.objectId in data) {
+        if (el.objectId in data) {
             data[el.objectId].x.push(el.x);
             data[el.objectId].y.push(el.y);
             data[el.objectId].timeStamp.push(el.timeStamp);
@@ -14,7 +12,7 @@ export const getLists = (id=null) => {
             data[el.objectId] = {
                 x: [el.x],
                 y: [el.y],
-                timeStamp:[el.timeStamp],
+                timeStamp: [el.timeStamp],
             }
         }
 
