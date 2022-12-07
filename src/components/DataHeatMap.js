@@ -18,7 +18,6 @@ const DataHeatMap = ({ data, targetId }) => {
             }
         });
         if (!heatmapRef || !heatmapRef.current) {
-            console.log("lkjl");
             heatmapRef.current = Heatmap.create({
                 container: containerRef.current
             });
