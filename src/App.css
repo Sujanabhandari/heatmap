@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+.player{
+  position: relative;
+}
+.player:hover{
+  cursor: pointer;
+}
+
+/* .main_container{
+  position: absolute;
+} */
